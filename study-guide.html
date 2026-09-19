@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Complete Security+ SY0-701 Study Guide | SecTechMaster</title>
+<meta name="description" content="Free preview of the SecTechMaster Security+ SY0-701 study guide. Read Domain 1 in full, then get the complete PDF + EPUB guide.">
+<style>
+:root {
+  --purple: #2f1b63;
+  --purple-dark: #1a0f38;
+  --teal: #1f7a6c;
+  --mint: #9be8cf;
+  --text: #24242e;
+  --muted: #6b6480;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: var(--text);
+  line-height: 1.6;
+  background: #ffffff;
+}
+
+a { color: var(--teal); }
+
+/* ---- Sticky nav ---- */
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--purple-dark);
+  color: #fff;
+  padding: 0.7em 1.2em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.6em;
+}
+.site-nav .brand { font-weight: 800; letter-spacing: 1px; color: var(--mint); font-size: 0.95em; }
+.site-nav .links { display: flex; gap: 1em; flex-wrap: wrap; font-size: 0.85em; }
+.site-nav .links a { color: #d8cdf5; text-decoration: none; }
+.site-nav .links a:hover { color: #ffffff; }
+.site-nav .cta-btn {
+  background: var(--teal);
+  color: #fff;
+  padding: 0.45em 0.9em;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.85em;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* ---- Hero ---- */
+.hero {
+  background: linear-gradient(160deg, var(--purple-dark) 0%, var(--purple) 55%, #14532d 130%);
+  color: #fff;
+  padding: 4em 1.5em 3.5em 1.5em;
+  text-align: center;
+}
+.hero .eyebrow { color: var(--mint); letter-spacing: 3px; font-weight: 700; font-size: 0.85em; text-transform: uppercase; }
+.hero h1 { font-size: clamp(1.8em, 5vw, 2.6em); line-height: 1.25; margin: 0.4em auto 0.5em auto; max-width: 22ch; }
+.hero p { color: #d8cdf5; max-width: 46ch; margin: 0 auto 1.6em auto; font-size: 1.05em; }
+.hero .meta-row { display: flex; justify-content: center; gap: 1.2em; flex-wrap: wrap; margin-bottom: 2em; }
+.hero .meta-box { border: 1px solid rgba(255,255,255,0.3); border-radius: 8px; padding: 0.6em 1.1em; font-size: 0.85em; }
+.hero .meta-box b { display: block; font-size: 1.3em; }
+.hero .cta-row { display: flex; justify-content: center; align-items: center; gap: 1em; flex-wrap: wrap; }
+.hero .cta-btn {
+  display: inline-block;
+  background: var(--teal);
+  color: #fff;
+  padding: 0.8em 1.6em;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+}
+.hero .qr { width: 84px; height: 84px; border-radius: 8px; background: #fff; padding: 5px; }
+
+/* ---- Section container ---- */
+.container { max-width: 780px; margin: 0 auto; padding: 3em 1.5em; }
+.container h2.section-heading { color: var(--purple); font-size: 1.5em; border: none; margin-bottom: 0.3em; }
+
+.intro-block {
+  background: #f4f1fb;
+  border-left: 4px solid #4a2e8c;
+  padding: 1em 1.3em;
+  border-radius: 6px;
+  margin: 1em 0 1.6em 0;
+}
+.intro-block b { color: var(--purple); }
+
+.toc { margin-top: 0.6em; }
+.toc-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px dotted #ccc;
+  padding: 0.7em 0.2em;
+  font-size: 0.95em;
+  text-decoration: none;
+  color: var(--text);
+}
+.toc-item:hover { background: #faf9fd; }
+.toc-item .num {
+  display: inline-block;
+  color: white;
+  font-size: 0.75em;
+  font-weight: 700;
+  padding: 0.15em 0.5em;
+  border-radius: 4px;
+  margin-right: 0.6em;
+}
+
+/* ---- Domain sections ---- */
+.domain-section { scroll-margin-top: 4.5em; }
+.domain-section .chapter-cover {
+  padding: 2.5em 1.5em;
+  color: #fff;
+  text-align: center;
+}
+.domain-section .chapter-cover .eyebrow { color: var(--mint); letter-spacing: 2px; font-weight: 700; font-size: 0.8em; text-transform: uppercase; }
+.domain-section .chapter-cover h1 { font-size: clamp(1.6em, 4vw, 2.2em); margin: 0.4em 0 0.5em 0; }
+.domain-section .chapter-cover .subtitle { max-width: 55ch; margin: 0 auto 1em auto; color: rgba(255,255,255,0.85); }
+.domain-section .chapter-cover .meta-row { display: flex; justify-content: center; gap: 1em; flex-wrap: wrap; }
+.domain-section .chapter-cover .meta-box { border: 1px solid rgba(255,255,255,0.3); border-radius: 8px; padding: 0.5em 1em; font-size: 0.8em; }
+.domain-section .chapter-cover .meta-box b { display: block; font-size: 1.2em; }
+
+.domain-body { max-width: 780px; margin: 0 auto; padding: 2em 1.5em 3em 1.5em; }
+
+h2.topic-title {
+  font-size: 1.3em;
+  padding-bottom: 0.3em;
+  margin: 1.8em 0 0.4em 0;
+  border-bottom: 2.5px solid;
+}
+.topic-num {
+  display: inline-block;
+  color: white;
+  font-size: 0.7em;
+  font-weight: 700;
+  padding: 0.2em 0.6em;
+  border-radius: 4px;
+  margin-right: 0.5em;
+  vertical-align: middle;
+}
+p.lede { color: var(--muted); }
+
+.callout { border-radius: 8px; padding: 1em 1.2em; margin: 1em 0; font-size: 0.95em; }
+.callout-title { font-weight: 800; font-size: 0.78em; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.5em; display: block; }
+.callout-confuse { background: #fdeeee; border: 1px solid #f0c6c6; }
+.callout-confuse .callout-title { color: #a13333; }
+.callout-confuse .item { margin: 0.5em 0; }
+.callout-confuse .item b { color: #a13333; }
+.callout-fact { background: #eef7f4; border: 1px solid #bfe4d8; }
+.callout-fact .callout-title { color: var(--teal); }
+.callout-example { background: #f7f5ee; border: 1px solid #e3dcbf; }
+.callout-example .callout-title { color: #8a6d1f; }
+.callout-example .q { font-weight: 600; margin-bottom: 0.5em; }
+.callout-example .opt { margin: 0.3em 0 0.3em 0.4em; }
+.callout-example .correct { color: var(--teal); font-weight: 700; }
+.callout-example .answer-note { margin-top: 0.6em; font-style: italic; color: #5a5540; }
+
+ul.keyfacts { margin: 0.6em 0 0.4em 1.3em; padding: 0; }
+ul.keyfacts li { margin-bottom: 0.4em; }
+
+.section-divider { text-align: center; color: #c9c2e0; margin: 2em 0; font-size: 1em; letter-spacing: 6px; }
+
+/* ---- App CTA block ---- */
+.app-cta {
+  background: #eef7f4;
+  border: 1px solid #bfe4d8;
+  border-radius: 10px;
+  padding: 1.8em 1.6em;
+  margin: 2em auto;
+  max-width: 780px;
+  display: flex;
+  align-items: center;
+  gap: 1.6em;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: left;
+}
+.app-cta img { width: 90px; height: 90px; border-radius: 8px; background: #fff; padding: 6px; border: 1px solid #bfe4d8; }
+.app-cta .cta-text { flex: 1; min-width: 220px; }
+.app-cta .callout-title { color: var(--teal); }
+.app-cta a.btn {
+  display: inline-block;
+  margin-top: 0.7em;
+  padding: 0.7em 1.4em;
+  background: var(--teal);
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+footer.site-footer {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.85em;
+  padding: 2em 1.5em 3em 1.5em;
+}
+
+/* ---- Mobile ---- */
+@media (max-width: 640px) {
+  .site-nav .links { display: none; }
+  .hero { padding: 3em 1.2em 2.5em 1.2em; }
+  .container, .domain-body { padding: 2em 1.2em; }
+  .app-cta { flex-direction: column; text-align: center; }
+}
+
+
+.domain-1 .chapter-cover { background: linear-gradient(160deg, #241549 0%, #5b3fa0 140%); }
+.domain-1 h2.topic-title { border-bottom-color: #5b3fa0; }
+.domain-1 .topic-num { background: #5b3fa0; }
+
+
+.domain-2 .chapter-cover { background: linear-gradient(160deg, #241549 0%, #a13333 140%); }
+.domain-2 h2.topic-title { border-bottom-color: #a13333; }
+.domain-2 .topic-num { background: #a13333; }
+
+
+.domain-3 .chapter-cover { background: linear-gradient(160deg, #241549 0%, #2a5d9f 140%); }
+.domain-3 h2.topic-title { border-bottom-color: #2a5d9f; }
+.domain-3 .topic-num { background: #2a5d9f; }
+
+
+.domain-4 .chapter-cover { background: linear-gradient(160deg, #241549 0%, #1f7a6c 140%); }
+.domain-4 h2.topic-title { border-bottom-color: #1f7a6c; }
+.domain-4 .topic-num { background: #1f7a6c; }
+
+
+.domain-5 .chapter-cover { background: linear-gradient(160deg, #241549 0%, #7a5a15 140%); }
+.domain-5 h2.topic-title { border-bottom-color: #7a5a15; }
+.domain-5 .topic-num { background: #7a5a15; }
+
+.paywall-wrap { position: relative; margin-top: -220px; padding-top: 220px; }
+.paywall-fade {
+  position: absolute; top: 0; left: 0; right: 0; height: 220px;
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, #ffffff 85%);
+  pointer-events: none;
+}
+.paywall-cta {
+  max-width: 680px; margin: 0 auto; padding: 2.5em 1.5em 3.5em 1.5em; text-align: center;
+}
+.paywall-cta h2 { color: #2f1b63; font-size: 1.4em; margin-bottom: 0.4em; }
+.paywall-cta p { color: #45405c; max-width: 52ch; margin: 0 auto 1.4em auto; }
+.paywall-cta .btn {
+  display: inline-block; padding: 0.9em 1.8em; background: #1f7a6c; color: #fff;
+  border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1.05em;
+}
+.app-plug-row {
+  display: flex; align-items: center; justify-content: center; gap: 0.8em;
+  margin-top: 22px;
+}
+.app-plug-row .qr { width: 52px; height: 52px; border-radius: 6px; background: #fff; padding: 4px; flex-shrink: 0; }
+.app-plug-row .app-plug-text { text-align: left; font-size: 0.82em; color: #b6acd6; }
+.app-plug-row .app-plug-text span { display: block; }
+.app-plug-row .app-plug-text a { color: #9be8cf; font-weight: 700; text-decoration: none; }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="brand">SECTECHMASTER</div>
+  <div class="links"><a href="#preview">Preview</a><a href="#buy">Get the Guide</a></div>
+  <a class="cta-btn" href="https://gumroad.com/l/YOUR-PRODUCT-HERE">Buy Now</a>
+</nav>
+
+
+<header class="hero">
+  <div class="eyebrow">SecTechMaster</div>
+  <h1>The Complete Security+ SY0-701 Study Guide</h1>
+  <p>Every concept in the SecTechMaster Security+ Practice App&mdash;1,050 questions across all five official domains&mdash;reorganized, explained, and cross-referenced as a guide you actually read, not just drill.</p>
+  <div class="meta-row">
+    <div class="meta-box"><b>63</b>topics</div>
+    <div class="meta-box"><b>1,050</b>questions covered</div>
+    <div class="meta-box"><b>SY0-701</b>exam version</div>
+  </div>
+  <div class="cta-row">
+    <a class="cta-btn" href="https://gumroad.com/l/YOUR-PRODUCT-HERE">&#9654; Get the Full Guide &mdash; PDF + EPUB</a>
+  </div>
+  <p style="margin-top:14px; font-size:0.85em; color:#b6acd6;">Read the full first domain free below before you buy.</p>
+  <div class="app-plug-row">
+    <img class="qr" src="data:image/png;base64,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" alt="QR code to SecTechMaster on Google Play">
+    <div class="app-plug-text">
+      <span>Also studying with the app?</span>
+      <a href="https://play.google.com/store/apps/details?id=com.ade60.SecPlusPaidApp">Get SecTechMaster on Google Play &rarr;</a>
+    </div>
+  </div>
+</header>
+
+
+<div class="container" id="preview">
+  <h2 class="section-heading">How to Use This Guide</h2>
+  <p class="lede">This guide covers the same material as the SecTechMaster Security+ Practice App&rsquo;s full 1,050-question bank, organized around <b>63 consolidated topics</b> across the five official SY0-701 domains, rather than one question at a time.</p>
+
+  <div class="intro-block">
+    <b>The app and this guide do different jobs.</b> The app is built for recall drilling&mdash;spaced repetition, timed practice, tracking which questions you still miss. This guide is built for understanding&mdash;reading each concept once, in context, alongside the concepts it's most often confused with, so the drilling in the app sticks the second time around.
+  </div>
+
+  <h2 class="section-heading" style="font-size:1.15em; margin-top:2em;">What's in every topic</h2>
+  <ul class="keyfacts">
+    <li><b>An explanatory lede</b> &mdash; new framing that isn't in the app, setting up why the concept matters and how the exam tends to test it.</li>
+    <li><b>Key facts</b> &mdash; the specific, memorizable details pulled from across all the app's questions on that concept.</li>
+    <li><b>A "Don't confuse these" box</b> &mdash; built directly from the app's own wrong-answer explanations, since that's exactly where exam points get lost.</li>
+    <li><b>A worked example</b> &mdash; on topics where one clean scenario captures the whole idea, styled like the app's own quiz screens.</li>
+  </ul>
+
+  <h2 class="section-heading" style="font-size:1.15em; margin-top:2em;">What's inside the full guide</h2>
+  <div class="toc"><div class="toc-item"><span><span class="num" style="background:#5b3fa0;">1</span>General Security Concepts</span><span>13 topics &middot; 130 questions &middot; 12%</span></div><div class="toc-item"><span><span class="num" style="background:#a13333;">2</span>Threats, Vulnerabilities &amp; Mitigations</span><span>14 topics &middot; 230 questions &middot; 22%</span></div><div class="toc-item"><span><span class="num" style="background:#2a5d9f;">3</span>Security Architecture</span><span>13 topics &middot; 190 questions &middot; 18%</span></div><div class="toc-item"><span><span class="num" style="background:#1f7a6c;">4</span>Security Operations</span><span>11 topics &middot; 290 questions &middot; 29%</span></div><div class="toc-item"><span><span class="num" style="background:#7a5a15;">5</span>Security Program Management &amp; Oversight</span><span>12 topics &middot; 210 questions &middot; 20%</span></div></div>
+  <p style="margin-top:1.2em; color:#6b6480; font-size:0.9em;">Domain 1 is free to read in full below. Domains 2&ndash;5 are in the paid PDF + EPUB bundle.</p>
+</div>
+
+<section class="domain-section domain-1" id="domain-1">
+<div class="chapter-cover">
+  <div class="eyebrow">SecTechMaster &middot; SY0-701 Study Guide</div>
+  <h1>Domain 1<br>General Security Concepts</h1>
+  <div class="subtitle">The foundational vocabulary everything else builds on: the CIA triad, access control philosophy, cryptographic basics, PKI, deception technology, physical controls, control categories, data states, resilience, and the governance documents that tie it all together.</div>
+  <div class="meta-row">
+    <div class="meta-box"><b>13</b>topics covered</div>
+<div class="meta-box"><b>12%</b>of exam weight</div>
+<div class="meta-box"><b>SY0-701</b>exam version</div>
+
+  </div>
+</div>
+<div class="domain-body"><h2 style="color:#2f1b63; font-size:14pt;">In this chapter</h2><div class="toc"><div class="toc-item"><span>1. The CIA Triad &amp; Non-Repudiation</span></div><div class="toc-item"><span>2. Access Control Models &amp; Principles</span></div><div class="toc-item"><span>3. Authentication Factors &amp; MFA</span></div><div class="toc-item"><span>4. Cryptographic Fundamentals</span></div><div class="toc-item"><span>5. PKI &amp; Digital Certificates</span></div><div class="toc-item"><span>6. Key Management &amp; Hardware-Based Cryptography</span></div><div class="toc-item"><span>7. Deception Technology</span></div><div class="toc-item"><span>8. Physical Security Controls</span></div><div class="toc-item"><span>9. Control Categories &amp; Functional Types</span></div><div class="toc-item"><span>10. Data States, Classification &amp; Disposal</span></div><div class="toc-item"><span>11. Resilience, Backups &amp; Redundancy</span></div><div class="toc-item"><span>12. Governance: Change Management, Policies &amp; Playbooks</span></div><div class="toc-item"><span>13. Cloud, Federation, Identity &amp; Vendor Governance</span></div></div>
+<h2 class="topic-title"><span class="topic-num">1</span>The CIA Triad &amp; Non-Repudiation</h2>
+<p class="lede">Almost every "what security goal is this?" question on the exam is testing whether you can tell confidentiality, integrity, and non-repudiation apart. They sound similar in casual conversation but protect against completely different failures.</p>
+<ul class="keyfacts">
+  <li><b>Confidentiality</b> — keeping data unreadable to unauthorized parties. Encryption at rest is the standard answer whenever a scenario mentions physical theft of a device or drive.</li>
+  <li><b>Integrity</b> — verifying data hasn't been altered. Comparing a downloaded file's hash to the publisher's published hash is the textbook integrity check.</li>
+  <li><b>Availability</b> — the third, unspoken member of the triad: systems and data must be accessible when legitimately needed. Almost every backup and redundancy topic later in this chapter exists purely to protect availability.</li>
+  <li><b>Non-repudiation</b> — proof that someone can't credibly deny having performed a specific action, usually established through digital signatures and cryptographic evidence.</li>
+</ul>
+<div class="callout callout-confuse">
+<span class="callout-title">Don't confuse these</span>
+  <div class="item"><b>Confidentiality vs. Integrity</b> — confidentiality is about unauthorized <i>reading</i>; integrity is about unauthorized <i>changing</i>. If the scenario says "even if the drive is stolen," that's confidentiality. If it says "hasn't been tampered with," that's integrity.</div>
+  <div class="item"><b>Non-repudiation vs. Authentication</b> — authentication proves identity at the moment of login; non-repudiation proves, after the fact and permanently, that a specific person performed a specific action and can't walk it back.</div>
+  <div class="item"><b>A digital signature alone doesn't provide confidentiality</b> — it proves integrity and non-repudiation, but signing a document doesn't encrypt it. Don't let "signature" and "encryption" blur together just because both involve key pairs.</div>
+</div>
+<div class="callout callout-example">
+<span class="callout-title">Worked example</span>
+  <div class="q">A finance employee digitally signs a wire transfer request. They later claim they never submitted it. What security concept prevents this denial from succeeding?</div>
+  <div class="opt correct">✓ Non-repudiation</div>
+  <div class="opt">Authentication</div>
+  <div class="opt">Confidentiality</div>
+  <div class="opt">Availability</div>
+  <div class="answer-note">Authentication only proves who logged in at the time; it's the cryptographic proof behind the signature — non-repudiation — that stops the later denial from holding up.</div>
+</div>
+
+<h2 class="topic-title"><span class="topic-num">2</span>Access Control Models &amp; Principles</h2>
+<p class="lede">Separate from any specific technology, these are the philosophies that decide who gets access to what, and they show up constantly as "which principle is this?" questions.</p>
+<ul class="keyfacts">
+  <li><b>Zero Trust</b> — "never trust, always verify": every access request is authenticated and authorized continuously, regardless of whether it originates inside or outside the traditional network perimeter.</li>
+  <li><b>Role-Based (RBAC)</b> — access granted purely by an assigned role or group.</li>
+  <li><b>Attribute-Based (ABAC)</b> — access granted by combining multiple attributes at once (job title <i>and</i> department <i>and</i> time of day, for example).</li>
+  <li><b>Mandatory Access Control (MAC)</b> — enforces clearance-based restrictions independently of whether the login credentials are otherwise valid — a legitimately authenticated user still can't cross a clearance boundary.</li>
+  <li><b>Least privilege</b> — accounts start with no more access than the role strictly needs, granted deliberately rather than inherited by default.</li>
+  <li><b>Need to know</b> — an additional, narrower filter on top of a role: access to one specific sensitive item (like a merger project) only because it's directly relevant to the current task.</li>
+  <li><b>Separation of duties</b> — splits one critical action across multiple people acting <i>simultaneously</i> (dual approval, two-person integrity at a vault).</li>
+  <li><b>Job rotation</b> — moves a single person through different roles <i>over time</i>, surfacing fraud or errors a person might otherwise hide indefinitely in one seat.</li>
+</ul>
+<div class="callout callout-confuse">
+<span class="callout-title">Don't confuse these</span>
+  <div class="item"><b>Least privilege vs. Need to know</b> — least privilege limits an account's overall access scope by role; need to know adds a narrower, task-specific filter on top of that scope, even for something the role would otherwise allow.</div>
+  <div class="item"><b>Separation of duties vs. Job rotation</b> — separation of duties splits one action among multiple people <i>at the same time</i>; job rotation moves one person through different roles <i>over time</i>. Both fight fraud, but on different axes.</div>
+  <div class="item"><b>RBAC vs. ABAC</b> — if more than one factor drives the access decision (role <i>and</i> time of day, say), it's ABAC. A single fixed role alone is RBAC.</div>
+</div>
+<div class="callout callout-example">
+<span class="callout-title">Worked example</span>
+  <div class="q">A new hire can view customer records the moment their account is created, before any manager has reviewed what they should be allowed to see. Which principle has been violated?</div>
+  <div class="opt correct">✓ Least privilege</div>
+  <div class="opt">Need to know</div>
+  <div class="opt">Separation of duties</div>
+  <div class="opt">Job rotation</div>
+  <div class="answer-note">The problem isn't that the new hire will never need customer data — it's that access was granted by default before anyone deliberately decided they should have it.</div>
+</div>
+
+<h2 class="topic-title"><span class="topic-num">3</span>Authentication Factors &amp; MFA</h2>
+<p class="lede">Three categories, and multi-factor authentication only counts when you combine <i>different</i> categories — not two instances of the same one.</p>
+<ul class="keyfacts">
+  <li><b>Something you know</b> — a password, a PIN, a security question.</li>
+  <li><b>Something you have</b> — a registered phone receiving a push notification, a hardware security key.</li>
+  <li><b>Something you are</b> — a biometric trait: fingerprint, iris scan.</li>
+  <li><b>MFA</b> requires a second, independent factor from a <i>different</i> category, so a compromised password alone can't get an attacker in.</li>
+</ul>
+<div class="callout callout-confuse">
+<span class="callout-title">Don't confuse these</span>
+  <div class="item"><b>Password + security question is NOT MFA</b> — both are "something you know." The exam plants this constantly as a trap answer that looks like two-factor but isn't.</div>
+  <div class="item"><b>Fingerprint vs. hardware key</b> — a fingerprint is "something you are" (an inherent biological trait); a hardware key is "something you have" (a physical object you must possess and present). Easy to conflate since both are physically presented to a reader.</div>
+</div>
+
+<h2 class="topic-title"><span class="topic-num">4</span>Cryptographic Fundamentals</h2>
+<p class="lede">This is the single most trap-heavy topic in Domain 1: hashing, encryption, and tokenization all "transform data," and the exam relies on you knowing exactly how each one is reversed (or isn't).</p>
+<ul class="keyfacts">
+  <li><b>Hashing</b> — one-way; mathematically impossible to reverse back into the original value. This is exactly why passwords are hashed rather than encrypted.</li>
+  <li><b>Encryption</b> — reversible with the correct key. Symmetric encryption (one shared key) is fast and suited to bulk data; asymmetric encryption (public/private key pairs) is slower but ideal for securely exchanging that shared key — the hybrid approach TLS itself uses.</li>
+  <li><b>Tokenization</b> — replaces sensitive data with a random value that has <i>no mathematical relationship</i> to the original; the real value lives in a separate secure vault. There's no formula to reverse it, unlike encryption.</li>
+  <li><b>Obfuscation</b> — makes legitimate code or data harder to read/reverse-engineer without changing what it does (e.g., renaming variables to meaningless strings before release).</li>
+  <li><b>Salting</b> — adds a unique random value to each password before hashing, so identical passwords don't produce identical hashes, defeating precomputed rainbow-table attacks.</li>
+  <li><b>Key stretching</b> — deliberately slows down the hashing computation itself (bcrypt, PBKDF2), making large-scale brute-force cracking impractically expensive.</li>
+  <li><b>Perfect forward secrecy</b> — each session uses temporary, ephemeral keys not derived from the server's long-term private key, so a stolen private key years later still can't decrypt old recorded sessions.</li>
+  <li><b>Homomorphic encryption</b> — allows computation directly on encrypted data, producing an encrypted result, without ever decrypting the data itself.</li>
+</ul>
+<div class="callout callout-confuse">
+<span class="callout-title">Don't confuse these</span>
+  <div class="item"><b>Hashing vs. Encryption vs. Tokenization</b> — hashing has no key and can't be reversed at all; encryption is reversible with a key; tokenization has no mathematical link to the original whatsoever and requires a vault lookup, not a computation, to reverse.</div>
+  <div class="item"><b>Salting vs. Key stretching</b> — salting stops identical passwords from producing identical hashes (defeats rainbow tables); key stretching slows down the hash computation itself (defeats brute force at scale). They solve different problems and are often used together — bcrypt effectively does both.</div>
+  <div class="item"><b>Perfect forward secrecy vs. Key escrow</b> — near-opposite goals that sound similar: PFS makes past sessions <i>unrecoverable</i> even if the long-term key leaks later; key escrow deliberately keeps a <i>recoverable</i> copy of a key on file.</div>
+</div>
+
+<h2 class="topic-title"><span class="topic-num">5</span>PKI &amp; Digital Certificates</h2>
+<p class="lede">Public Key Infrastructure questions almost always reduce to one question: can trust actually be established here, and if not, why not?</p>
+<ul class="keyfacts">
+  <li><b>The CSR/CA flow</b> — an administrator generates a Certificate Signing Request containing the public key and identity details (the private key stays local and is never sent); the CA verifies that identity and issues a signed certificate.</li>
+  <li><b>Certificate pinning</b> — an application hardcodes a specific certificate (or its public key), rejecting any other certificate even one issued by a technically valid, trusted CA. This defends against fraudulently issued certificates that pass normal trust checks.</li>
+  <li><b>Revocation (CRL / OCSP)</b> — lets a certificate be instantly invalidated before its natural expiration, since revocation status isn't stored in the certificate itself; the client has to actively check a CRL or query an OCSP responder.</li>
+  <li><b>Code signing, S/MIME, and vendor hash+signature verification</b> — the same trust logic applied to software packages, email, and update packages respectively: cryptographically proving both origin and that nothing was tampered with in transit.</li>
+</ul>
+<div class="callout callout-confuse">
+<span class="callout-title">Don't confuse these</span>
+  <div class="item"><b>Certificate pinning vs. revocation checking</b> — pinning rejects a <i>different</i> certificate even if it's validly issued; revocation checking flags a certificate that <i>used to be valid</i> but has since been revoked. Different problems: wrong-but-valid cert vs. revoked cert.</div>
+  <div class="item"><b>A "valid-looking" signature isn't automatically trustworthy</b> — if the root CA itself isn't recognized as trusted, the entire chain fails regardless of how legitimate anything else looks. The correct response is always to flag it as invalid, never to trust it because a certificate is merely present.</div>
+</div>
+<div class="callout callout-example">
+<span class="callout-title">Worked example</span>
+  <div class="q">A user receives an email with an attached PDF that appears to have a valid signature from their bank, but the certificate was issued by an untrusted root. What should this cause?</div>
+  <div class="opt correct">✓ The client should flag the signature as invalid since trust cannot be established</div>
+  <div class="opt">The client should trust it since a certificate is present</div>
+  <div class="opt">The client should silently accept it since the bank's name matches</div>
+  <div class="opt">The client should convert it to a self-signed certificate</div>
+  <div class="answer-note">Trust always depends on the chain leading back to a recognized authority — an untrusted root breaks that chain no matter how legitimate everything else appears.</div>
+</div>
+
+<h2 class="topic-title"><span class="topic-num">6</span>Key Management &amp; Hardware-Based Cryptography</h2>
+<p class="lede">Where and how keys themselves are generated, stored, and eventually retired — a step up in abstraction from the cryptography itself.</p>
+<ul class="keyfacts">
+  <li><b>Key management lifecycle</b> — the umbrella process: generating keys, rotating them on a schedule, and securely destroying old ones once retired.</li>
+  <li><b>Hardware Security Module (HSM)</b> — dedicated, centralized hardware serving <i>many</i> systems, generating/storing/using keys without ever exposing the raw private key outside the device.</li>
+  <li><b>Secure enclave</b> — a protected hardware region isolated within a <i>single</i> device's own processor (typically mobile), doing the same job as an HSM but at device scale rather than centrally.</li>
+  <li><b>Key escrow</b> — securely stores a recoverable copy of a key with documented recovery procedures, so encrypted data can still be accessed years later even if the original administrator has left.</li>
+  <li><b>Cryptographic agility</b> — lets an organization swap out a weakening algorithm for a stronger one without a major system redesign, keeping the strategy resilient as computing power advances.</li>
+  <li><b>Root CA / intermediate CA delegation</b> — the root's highly sensitive private key stays offline and rarely used, while a subordinate CA handles routine day-to-day certificate issuance — limiting the root key's exposure.</li>
+</ul>
+<div class="callout callout-confuse">
+<span class="callout-title">Don't confuse these</span>
+  <div class="item"><b>HSM vs. Secure enclave</b> — an HSM is centralized hardware serving many servers; a secure enclave is built into one individual device, isolated from that device's own OS. Scale and scope are the tell.</div>
+  <div class="item"><b>Key escrow vs. Perfect forward secrecy</b> (revisited) — escrow intentionally makes a key recoverable; PFS intentionally makes past sessions unrecoverable even with the key. If a scenario needs legal/business recoverability years later, it's escrow — never PFS.</div>
+</div>
+
+<h2 class="topic-title"><span class="topic-num">7</span>Deception Technology</h2>
+<p class="lede">CompTIA groups these under the umbrella term "disruption technology" — tools whose specific job is to waste an attacker's time and resources, not merely to detect them, though detection is usually a side effect.</p>
+<ul class="keyfacts">
+  <li><b>Honeytoken</b> — a single, small piece of fake data (like a planted credential) seeded to trigger an alert the moment it's used.</li>
+  <li><b>Honeyfile</b> — a single fake, tempting-looking document (e.g., <i>passwords_backup.xlsx</i>) with no legitimate purpose; any access to it is inherently suspicious.</li>
+  <li><b>Honeypot</b> — an entire decoy <i>system</i>, not just one item, designed to look valuable and attract an attacker's attention.</li>
+  <li><b>Honeynet</b> — multiple interconnected decoy systems, wasting an attacker's time and automated tools navigating a fully fake environment.</li>
+</ul>
+<div class="callout callout-confuse">
+<span class="callout-title">Don't confuse these</span>
+  <div class="item"><b>Scale is the whole game here</b> — honeytoken/honeyfile (a single fake item) &lt; honeypot (one decoy system) &lt; honeynet (many decoy systems working together). Read the scenario for how much fake infrastructure is actually described.</div>
+  <div class="item"><b>Deception vs. plain detective control</b> — a honeyfile technically does detect access, but CompTIA specifically buckets these under disruption technology when the goal is also to slow or waste the attacker's effort, not just log that something happened.</div>
+</div>
+<div class="callout callout-example">
+<span class="callout-title">Worked example</span>
+  <div class="q">A company wants a way to detect if an attacker has been reading files on a decoy server designed to look valuable, and separately wants to slow down an attacker's automated tools by wasting their time on fake systems. Select TWO.</div>
+  <div class="opt correct">✓ Honeypot with monitored decoy files</div>
+  <div class="opt correct">✓ Honeynet of interconnected decoy systems</div>
+  <div class="opt">A single planted honeytoken</div>
+  <div class="opt">A standard detective control camera log</div>
+  <div class="answer-note">One decoy server with monitored files matches the honeypot description; an entire interconnected fake network matches honeynet. The single honeytoken is too small in scale for either described goal here.</div>
+</div>
+
+<h2 class="topic-title"><span class="topic-num">8</span>Physical Security Controls</h2>
+<p class="lede">A cluster of "match the control to the exact threat" questions — the exam almost always names a very specific physical threat, and only one option actually addresses it.</p>
+<ul class="keyfacts">
+  <li><b>Mantrap (access control vestibule)</b> — one door must fully close before the next opens, physically preventing tailgating.</li>
+  <li><b>Microwave sensor</b> — detects movement across a large open area without needing any physical barrier, ideal for open perimeters.</li>
+  <li><b>Bollards</b> — short, sturdy posts specifically built to stop a vehicle from ramming through an entrance.</li>
+  <li><b>Glass break sensor</b> — detects the specific sound/vibration signature of breaking glass, for ground-floor windows.</li>
+  <li><b>Cable lock</b> — a physical device securing a laptop to a desk, preventing simple grab-and-go theft.</li>
+</ul>
+<div class="callout callout-confuse">
+<span class="callout-title">Don't confuse these</span>
+  <div class="item">The trap here isn't conceptual — it's <i>specificity</i>. "Stop a vehicle" is always bollards, never a generic fence. "Detect glass breaking" is always a glass break sensor, never a motion sensor. Match the control to the exact noun in the question, not to "physical security" in general.</div>
+</div>
+
+<h2 class="topic-title"><span class="topic-num">9</span>Control Categories &amp; Functional Types</h2>
+<p class="lede">The two-axis system that runs through the entire exam: what <i>kind</i> of control is it (technical / administrative / physical), and what does it actually <i>do</i> (preventive / detective / deterrent / directive / corrective / compensating)?</p>
+<ul class="keyfacts">
+  <li><b>Directive</b> — tells people what they must do via policy (e.g., "report incidents within one hour"). It instructs behavior; it doesn't detect or technically enforce anything.</li>
+  <li><b>Detective</b> — identifies and records that something happened, after the fact (a badge log, a camera recording). It doesn't stop the event.</li>
+  <li><b>Deterrent</b> — discourages unauthorized behavior through visible presence or psychological effect (a guard station, a warning banner) without technically stopping a determined attacker.</li>
+  <li><b>Preventive</b> — physically or technically blocks the action before it can happen (a locked mantrap door, a required multi-approval process).</li>
+</ul>
+<div class="callout callout-confuse">
+<span class="callout-title">Don't confuse these</span>
+  <div class="item"><b>The same device can be two different functions depending on what's asked</b> — a badge reader that physically locks the door is preventive; the access log it produces is detective. Read exactly which part of the scenario the question is pointing at.</div>
+  <div class="item"><b>Deterrent vs. Preventive</b> — if the scenario explicitly says the control "doesn't technically stop" a determined attacker, it's deterrent. If it physically or procedurally blocks the action outright, it's preventive.</div>
+  <div class="item"><b>Administrative controls can still be "preventive"</b> — a documented process requiring three approvals before a change is administrative (policy-based, not technical or physical) <i>and</i> preventive (it stops the unauthorized action from happening at all). Category and function are independent axes — don't assume administrative always means detective or directive.</div>
+</div>
+<div class="callout callout-example">
+<span class="callout-title">Worked example</span>
+  <div class="q">A badge reader on a server room door records every entry but does nothing to stop someone with a stolen badge from walking in. Which control category BEST describes the badge log itself?</div>
+  <div class="opt correct">✓ Detective</div>
+  <div class="opt">Preventive</div>
+  <div class="opt">Deterrent</div>
+  <div class="opt">Directive</div>
+  <div class="answer-note">The same badge reader would be a preventive control if it locked the door — but the question specifically asks about the log, which only records for later review.</div>
+</div>
+
+<h2 class="topic-title"><span class="topic-num">10</span>Data States, Classification &amp; Disposal</h2>
+<p class="lede">The same confidentiality goal, applied to data at three different points in its life — plus the housekeeping that has to happen before and after.</p>
+<ul class="keyfacts">
+  <li><b>Data classification</b> — labeling data (Public / Internal / Confidential / Restricted) so protection can be matched to actual sensitivity rather than treating everything identically.</li>
+  <li><b>Data at rest</b> — stored data (on a disk or in a database), protected primarily by encryption at rest.</li>
+  <li><b>Data in transit</b> — data actively moving across a network (e.g., between a browser and a server), protected primarily by TLS.</li>
+  <li><b>Data in use</b> — data actively being processed in memory or by the CPU, protected by mechanisms like a secure enclave that encrypts it even during active computation.</li>
+  <li><b>Data inventory</b> — a complete catalog of all the information an organization stores, the foundational exercise that has to happen before classification or protection policy can be applied at all.</li>
+  <li><b>Secure disposal / media sanitization</b> — physically shredding documents or wiping decommissioned drives so data can't be recovered after disposal.</li>
+</ul>
+<div class="callout callout-confuse">
+<span class="callout-title">Don't confuse these</span>
+  <div class="item"><b>Data in use vs. in transit vs. at rest</b> — the same confidentiality concern, but the scenario's own wording tells you which state it is: "while being processed" = in use; "as it travels" = in transit; "on a stolen drive" = at rest. Each needs a different technical mechanism (secure enclave / TLS / disk encryption respectively).</div>
+  <div class="item"><b>Data inventory vs. Data classification</b> — inventory answers "what data do we even have?"; classification answers "how sensitive is each piece?" Inventory logically has to come first.</div>
+  <div class="item"><b>Secure disposal vs. Data minimization</b> — disposal destroys data you already collected; minimization avoids collecting more than necessary in the first place. Different points in the data lifecycle, easy to conflate as "both reduce risk."</div>
+</div>
+
+<h2 class="topic-title"><span class="topic-num">11</span>Resilience, Backups &amp; Redundancy</h2>
+<p class="lede">Availability's toolbox: how organizations keep running (or come back quickly) when something fails.</p>
+<ul class="keyfacts">
+  <li><b>Hot site</b> — a live, fully synchronized backup facility that can take over instantly with zero data loss.</li>
+  <li><b>Warm site</b> — some infrastructure is ready, but additional setup and synchronization time is needed before full takeover — slower than hot, faster than cold.</li>
+  <li><b>Geographic dispersion</b> — a fully redundant, geographically distant copy kept in near-real-time sync, so a regional disaster can't take out both copies at once.</li>
+  <li><b>Full + differential backup</b> — a full backup on a fixed schedule (e.g., every Sunday), with each subsequent backup capturing everything changed since that <i>last full backup</i> — not since the previous day.</li>
+  <li><b>Incremental backup</b> — captures only what changed since the <i>previous backup of any kind</i>, resulting in smaller daily backups but a longer restore chain.</li>
+  <li><b>Recovery Point Objective (RPO)</b> — the maximum acceptable amount of data loss, measured in time ("we can lose up to 1 hour of data").</li>
+  <li><b>Full redundancy / no single point of failure</b> — redundant power, network paths, and servers all active simultaneously, so any one component's failure doesn't bring the whole system down.</li>
+</ul>
+<div class="callout callout-confuse">
+<span class="callout-title">Don't confuse these</span>
+  <div class="item"><b>RPO vs. RTO</b> — the classic mix-up. RPO measures acceptable data loss (a span of time looking <i>backward</i>); RTO measures acceptable downtime (a span of time looking <i>forward</i> to restoration). Memory aid: <i>Point = data, Time(to restore) = downtime.</i></div>
+  <div class="item"><b>Full+differential vs. Incremental</b> — differential backups always reference back to the one last full backup (they grow larger each day, but restoring only needs two backups total); incremental backups reference only the immediately previous backup (smaller each day, but restoring needs the entire chain in order).</div>
+  <div class="item"><b>Hot vs. Warm vs. Cold site</b> — distinguished purely by how ready the site already is: hot is instant and synchronized, warm needs setup time, cold offers only bare infrastructure and the longest recovery time.</div>
+</div>
+<div class="callout callout-example">
+<span class="callout-title">Worked example</span>
+  <div class="q">A company backs up its full database every Sunday and only the files changed since Sunday each other day. What backup strategy is this?</div>
+  <div class="opt correct">✓ Full plus differential</div>
+  <div class="opt">Full plus incremental</div>
+  <div class="opt">Snapshot only</div>
+  <div class="opt">Continuous data protection</div>
+  <div class="answer-note">Because every day's backup references back to the same Sunday full backup (not the previous day's backup), this is differential, not incremental.</div>
+</div>
+
+<h2 class="topic-title"><span class="topic-num">12</span>Governance: Change Management, Policies &amp; Playbooks</h2>
+<p class="lede">The paperwork side of security — but paperwork the exam expects you to be able to name precisely.</p>
+<ul class="keyfacts">
+  <li><b>Change management</b> — documenting a proposed change, getting formal approval, and preparing a rollback plan before touching production systems.</li>
+  <li><b>Emergency change management</b> — the same idea, but with a faster path and specific approval authority defined in advance for urgent situations.</li>
+  <li><b>Acceptable Use Policy (AUP)</b> — defines how company resources (like laptops) may and may not be used, including prohibiting unauthorized software.</li>
+  <li><b>Playbook</b> — a set of steps for a specific known event type, including <i>conditional branches</i> based on findings ("if X, do Y; if Z, do W").</li>
+  <li><b>Preparation (incident response phase)</b> — defining escalation paths, contact lists, and severity classifications <i>before</i> any incident occurs.</li>
+  <li><b>Incident severity classification framework</b> — documented, consistent criteria distinguishing a "critical" incident from a "low" one, so different analysts classify the same way.</li>
+</ul>
+<div class="callout callout-confuse">
+<span class="callout-title">Don't confuse these</span>
+  <div class="item"><b>Playbook vs. Runbook</b> (this pairing returns in Domain 4) — a playbook has conditional branches for handling variability; a runbook is a fixed, linear sequence for one specific, well-understood scenario.</div>
+  <div class="item"><b>Change management vs. Configuration management</b> — change management is the approval process for one specific change; configuration management tracks the ongoing <i>state</i> of systems over time. Both sound like generic "IT process" answers, so read for whether the scenario is about approving a change or tracking current state.</div>
+  <div class="item"><b>Preparation vs. the incident response plan's contents</b> — preparation is the exam's name for the <i>phase</i>; a severity framework, contact list, and escalation path are examples of the actual artifacts built during that phase.</div>
+</div>
+
+<h2 class="topic-title"><span class="topic-num">13</span>Cloud, Federation, Identity &amp; Vendor Governance</h2>
+<p class="lede">Who's responsible for what once systems, identities, and vendors span multiple organizations.</p>
+<ul class="keyfacts">
+  <li><b>Shared responsibility model (SaaS)</b> — the provider manages underlying infrastructure and hardware; the <i>customer</i> retains responsibility for managing user access and classifying their own data within the application.</li>
+  <li><b>Contractual responsibility matrix</b> — a formal, written agreement mapping exactly which security responsibilities belong to each party, specific to the service model used (IaaS / PaaS / SaaS).</li>
+  <li><b>Federation</b> — authenticating using an existing account from a trusted <i>third-party</i> identity provider, extending trust across organizational boundaries.</li>
+  <li><b>Network Access Control (NAC)</b> — checks a device's posture (patch level, antivirus status) before admitting it onto the network.</li>
+  <li><b>MDM with remote wipe</b> — remotely revokes a lost device's access and erases corporate data without needing physical recovery.</li>
+  <li><b>Conditional access policy</b> — automatically suspends or restricts access based on defined conditions, such as failing a device compliance check.</li>
+  <li><b>Vendor/tool vetting process</b> — formally evaluates whether a new technology is safe to introduce before any employee starts using it.</li>
+  <li><b>Onboarding verification gates &amp; offboarding equipment checklist</b> — the same governance principle (verify before a status change) applied at opposite ends of employment: background checks must clear before sensitive access is granted; equipment must be returned before the final paycheck.</li>
+  <li><b>CVE</b> — a standardized, <i>public</i> reference number for a specific, publicly disclosed vulnerability, distinct from any company's internal patch-tracking ID.</li>
+</ul>
+<div class="callout callout-confuse">
+<span class="callout-title">Don't confuse these</span>
+  <div class="item"><b>Federation vs. SSO</b> — federation crosses <i>organizational</i> boundaries using a third party's identity; SSO covers multiple resources <i>within one</i> trust boundary. "Existing account on a trusted third-party site" is always federation.</div>
+  <div class="item"><b>Onboarding gate vs. Offboarding checklist</b> — the same idea (verify before the status changes) applied at the start and the end of employment — one gates access <i>in</i>, the other gates the final paycheck <i>out</i>.</div>
+  <div class="item"><b>CVE vs. internal ticket number</b> — a CVE is shared and public across the entire industry; an internal patch-tracking ID means nothing outside the company that created it.</div>
+</div>
+<div class="section-divider">&bull; &bull; &bull;</div></div></section>
+
+<div class="paywall-wrap">
+  <div class="paywall-fade"></div>
+  <div class="paywall-cta">
+    <h2>Domains 2&ndash;5 continue in the full guide</h2>
+    <p>Threats &amp; Vulnerabilities, Security Architecture, Security Operations, and Program Management &amp; Oversight &mdash; 50 more topics, all written in the same depth as Domain 1 above.</p>
+    <a class="btn" href="https://gumroad.com/l/YOUR-PRODUCT-HERE">&#9654; Unlock the Full Guide &mdash; PDF + EPUB</a>
+  </div>
+</div>
+
+
+<div class="app-cta" id="buy">
+  <div class="cta-text" style="text-align:center; flex:none; width:100%;">
+    <span class="callout-title" style="text-align:center; display:block;">Get the complete guide</span>
+    <p style="margin:0.5em auto 1em auto; max-width:46ch;">All 5 domains, 63 topics, PDF + EPUB formats, one download. Read on any device, keep it forever.</p>
+    <a class="btn" href="https://gumroad.com/l/YOUR-PRODUCT-HERE">&#9654; Buy on Gumroad</a>
+  </div>
+</div>
+<div class="app-cta">
+  <img src="data:image/png;base64,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" alt="QR code to SecTechMaster on Google Play">
+  <div class="cta-text">
+    <span class="callout-title">Pair it with the app</span>
+    <p style="margin:0.4em 0 0 0;">The guide is the reading half. The SecTechMaster app is the practice half&mdash;timed drills, spaced repetition, and progress tracking across all 1,050 questions.</p>
+    <a class="btn" href="https://play.google.com/store/apps/details?id=com.ade60.SecPlusPaidApp">&#9654; Get SecTechMaster on Google Play</a>
+  </div>
+</div>
+
+
+<footer class="site-footer">SecTechMaster &middot; Security+ SY0-701 Study Guide &middot; Built from the SecTechMaster Practice App question bank &middot; <a href="https://play.google.com/store/apps/details?id=com.ade60.SecPlusPaidApp">Get the app</a></footer>
+
+</body>
+</html>
