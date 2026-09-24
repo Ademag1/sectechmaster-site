@@ -17,9 +17,9 @@ a{text-decoration:none;color:inherit}
 .cta{background:var(--teal);color:#041014;font-weight:700;padding:10px 18px;border-radius:7px;font-size:14px}
 .cta:hover{filter:brightness(1.1)}
 .hero{position:relative;isolation:isolate;min-height:100vh;display:flex;align-items:flex-end;overflow:hidden;border-bottom:1px solid rgba(123,233,255,.17);padding-bottom:70px}
-.heroArt{position:absolute;inset:0;z-index:-3;width:100%;height:100%;object-fit:cover;object-position:74% center;filter:saturate(1.08) contrast(1.05)}
-.heroShade{position:absolute;inset:0;z-index:-2;background:radial-gradient(ellipse 42% 68% at 76% 58%,rgba(32,188,177,.42) 0%,rgba(17,111,150,.30) 38%,rgba(10,48,83,.12) 72%,transparent 100%),linear-gradient(180deg,rgba(3,8,13,.97) 0%,rgba(4,18,27,.82) 30%,rgba(5,46,62,.62) 68%,rgba(7,35,72,.75) 100%),linear-gradient(90deg,rgba(4,12,20,.91) 0%,rgba(5,20,29,.76) 36%,rgba(6,33,47,.40) 66%,rgba(8,30,58,.24) 100%)}
-.gridNoise{position:absolute;inset:0;z-index:-1;opacity:.2;background-image:linear-gradient(rgba(96,233,226,.18) 1px,transparent 1px),linear-gradient(90deg,rgba(96,233,226,.18) 1px,transparent 1px);background-size:46px 46px;-webkit-mask-image:linear-gradient(90deg,#000,transparent 70%);mask-image:linear-gradient(90deg,#000,transparent 70%)}
+.heroArt{position:absolute;inset:0;z-index:-3;width:100%;height:100%;object-fit:cover;object-position:70% 40%;filter:saturate(1.05) contrast(1.05) brightness(1)}
+.heroShade{position:absolute;inset:0;z-index:-2;background:radial-gradient(ellipse 60% 65% at 50% 55%,rgba(20,140,130,.35) 0%,rgba(10,60,80,.3) 45%,rgba(4,10,20,.65) 78%,#040a14b0 100%)}
+.gridNoise{display:none}
 .heroInner{position:relative;padding-top:120px;max-width:640px}
 .eyebrow{display:inline-flex;align-items:center;gap:8px;color:var(--teal);font-size:12px;font-weight:700;letter-spacing:.14em}
 .eyebrow:before{content:'';width:8px;height:8px;border-radius:99px;background:var(--teal);box-shadow:0 0 13px var(--teal)}
@@ -39,7 +39,7 @@ section{padding:70px 0}
 .head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:38px;flex-wrap:wrap}
 .head h2{font-size:38px;margin:10px 0 0;font-weight:700}
 .head p{color:#b9cdd5;font-size:14px;max-width:340px;line-height:1.55;margin:0}
-#products{background:#0a1824}
+#products{background:radial-gradient(ellipse 60% 70% at 15% 0%,rgba(20,140,130,.16) 0%,transparent 60%),radial-gradient(ellipse 50% 60% at 100% 100%,rgba(20,140,130,.12) 0%,transparent 65%),#0a1824}
 .products{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:18px}
 .card{min-height:265px;display:flex;flex-direction:column;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 18px 45px rgba(0,0,0,.16);transition:.2s}
 .card:hover{transform:translateY(-4px);border-color:rgba(123,233,255,.5)}
@@ -50,22 +50,24 @@ section{padding:70px 0}
 .cTop.soc{background:linear-gradient(135deg,#006b70,#073047)}
 .cTop.linux{background:linear-gradient(135deg,#0a6860,#0a2730)}
 .cTop.windows{background:linear-gradient(135deg,#176e9b,#11304c)}
-.cTop.app{background:linear-gradient(135deg,#3a266f,#14103a)}
 .kicker{position:relative;z-index:1;font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
 .cRule{position:relative;z-index:1;height:3px;width:2.6rem;background:var(--teal);box-shadow:0 0 12px rgba(66,213,206,.66);margin:12px 0 10px}
 .cTop h3{position:relative;z-index:1;font-size:20px;margin:0;line-height:1;font-weight:700}
 .cBody{padding:18px 20px 20px;display:flex;flex-direction:column;flex:1;background:var(--panel)}
 .cBody p{font-size:12.5px;color:#c4d6dc;line-height:1.55;margin:0 0 14px}
-.crow{display:flex;align-items:center;justify-content:space-between;margin-top:auto}
-.price{font-size:16px;font-weight:800}
-.small{padding:9px 12px;font-size:11px}
-.mutedBtn{background:transparent;border:1px solid var(--line);color:#6d8894;cursor:default}
-.sample{display:block;margin-top:10px;font-size:11px;font-weight:700;color:var(--teal)}
-#about{border-top:1px solid rgba(123,233,255,.1);border-bottom:1px solid rgba(123,233,255,.1);background:#0c2030}
+.cAction{display:inline-flex;align-items:center;gap:6px;margin-top:auto;padding-top:18px;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;cursor:pointer}
+.cAction.disabled{color:#5d7280;cursor:default}
+.cAction.practice{color:#8dece5}
+.cAction.guide{color:#b9b4ff}
+.cAction.soc{color:#74f0e7}
+.cAction.linux{color:#8be4dc}
+.cAction.windows{color:#a4e9ff}
+.sample{display:block;margin-top:8px;font-size:10.5px;font-weight:600;color:#7c93a0}
+#about{border-top:1px solid rgba(123,233,255,.1);border-bottom:1px solid rgba(123,233,255,.1);background:radial-gradient(ellipse 70% 100% at 50% 0%,rgba(20,140,130,.14) 0%,transparent 70%),#0c2030}
 .trio{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
 .trio p.t{font-size:14px;font-weight:700;color:#a0faf3;margin:0 0 8px}
 .trio p.d{font-size:13px;color:#b9cdd5;margin:0;line-height:1.55}
-#interest{background:var(--ink)}
+#interest{background:radial-gradient(ellipse 60% 70% at 85% 20%,rgba(20,140,130,.16) 0%,transparent 65%),radial-gradient(ellipse 50% 60% at 10% 100%,rgba(20,140,130,.1) 0%,transparent 65%),var(--ink)}
 .register{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:center}
 .register h2{font-size:36px;margin:14px 0 0;line-height:.95;font-weight:700}
 .register p{color:#b9cdd5;font-size:15px;max-width:440px;line-height:1.6;margin-top:20px}
@@ -76,7 +78,7 @@ section{padding:70px 0}
 .field select option{background:#091724}
 .help{margin-top:8px;font-size:11px;color:#94adb7;line-height:1.45}
 .submitBtn{width:100%;background:var(--teal);color:#041014;border:0;border-radius:8px;padding:14px;font-weight:700;cursor:pointer;font-size:14px}
-footer{border-top:1px solid rgba(123,233,255,.1);background:#080f17}
+footer{border-top:1px solid rgba(123,233,255,.1);background:radial-gradient(ellipse 60% 100% at 50% 0%,rgba(20,140,130,.1) 0%,transparent 70%),#080f17}
 .foot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;padding:28px 0}
 .foot .copy{color:#8ca3ad;font-size:13px}
 .foot .flinks{display:flex;gap:22px;font-size:13px;color:#b9cdd5}
@@ -118,41 +120,35 @@ footer{border-top:1px solid rgba(123,233,255,.1);background:#080f17}
   </div>
   <div class="products">
     <article class="card">
-      <div class="cTop practice"><div class="kicker">Practice set</div><div><div class="cRule"></div><h3 class="display">Security+ Practice</h3></div></div>
-      <div class="cBody"><p>1,050 practice questions with detailed explanations and mock exams. 50 questions free, €15 to unlock all.</p>
-        <div class="crow"><span class="price">€15.00</span><a class="btn primary small" href="mailto:contact@sectechmaster.com?subject=Notify%20me%20at%20launch">Get the app</a></div>
+      <div class="cTop practice"><div class="kicker">Practice set</div><div><div class="cRule"></div><h3 class="display">Security Practice</h3></div></div>
+      <div class="cBody"><p>Targeted exercises that turn core concepts into decision-making habits. 50 questions free, €15 to unlock all.</p>
+        <a class="cAction practice" href="mailto:contact@sectechmaster.com?subject=Notify%20me%20at%20launch">Get the app →</a>
       </div>
     </article>
     <article class="card">
       <div class="cTop guide"><div class="kicker">Study guide</div><div><div class="cRule"></div><h3 class="display">Security Study Guide</h3></div></div>
-      <div class="cBody"><p>63 topics across all 5 SY0-701 domains. PDF + EPUB. Structured revision material for a durable security foundation.</p>
-        <div class="crow"><span class="price">€9.99</span><a class="btn primary small" href="/study-guide.html">Get the Guide</a></div>
+      <div class="cBody"><p>Structured revision material for building a durable security foundation. €9.99 for the full guide.</p>
+        <a class="cAction guide" href="/study-guide.html">Get the guide →</a>
         <a class="sample" href="/study-guide.html#preview">Read a free sample →</a>
       </div>
     </article>
     <article class="card">
       <div class="cTop soc"><div class="kicker">Complete edition</div><div><div class="cRule"></div><h3 class="display">SOC Analyst 1-2-3</h3></div></div>
-      <div class="cBody"><p>253 pages, 56 chapters — a field guide for developing alert triage, investigation, and analyst instincts, from Foundation to AWS and Azure/Microsoft 365 cloud security.</p>
-        <div class="crow"><span class="price">€13.99</span><a class="btn primary small" href="https://payhip.com/b/mz2Pp">Buy now</a></div>
+      <div class="cBody"><p>A field guide for developing alert triage, investigation, and analyst instincts. €13.99 for the complete edition.</p>
+        <a class="cAction soc" href="https://payhip.com/b/mz2Pp">Buy now →</a>
         <a class="sample" href="/SOC-Analyst-1-2-3-Free-Sample.pdf" target="_blank">Read a free sample →</a>
       </div>
     </article>
     <article class="card">
       <div class="cTop linux"><div class="kicker">Investigation</div><div><div class="cRule"></div><h3 class="display">Linux Security</h3></div></div>
-      <div class="cBody"><p>Follow evidence, inspect systems, and sharpen terminal-led investigation skills with realistic Linux scenarios.</p>
-        <div class="crow"><span class="price">—</span><button class="btn small mutedBtn" disabled>Coming soon</button></div>
+      <div class="cBody"><p>Follow evidence, inspect systems, and sharpen terminal-led investigation skills.</p>
+        <span class="cAction disabled">Coming soon</span>
       </div>
     </article>
     <article class="card">
       <div class="cTop windows"><div class="kicker">Investigation</div><div><div class="cRule"></div><h3 class="display">Windows Security</h3></div></div>
-      <div class="cBody"><p>Build confidence reading activity, analysing logs, and investigating endpoints across Windows environments.</p>
-        <div class="crow"><span class="price">—</span><button class="btn small mutedBtn" disabled>Coming soon</button></div>
-      </div>
-    </article>
-    <article class="card">
-      <div class="cTop app"><div class="kicker">App</div><div><div class="cRule"></div><h3 class="display">SOC Analyst Trainer</h3></div></div>
-      <div class="cBody"><p>Real-world scenarios, alerts, and investigation workflows to practice the SOC analyst mindset on the go.</p>
-        <div class="crow"><span class="price">—</span><button class="btn small mutedBtn" disabled>Coming soon</button></div>
+      <div class="cBody"><p>Build confidence reading activity, analysing logs, and investigating endpoints.</p>
+        <span class="cAction disabled">Coming soon</span>
       </div>
     </article>
   </div>
@@ -181,7 +177,6 @@ footer{border-top:1px solid rgba(123,233,255,.1);background:#080f17}
           <option>SOC Analyst 1-2-3</option>
           <option>Linux Security Investigation</option>
           <option>Windows Security</option>
-          <option>SOC Analyst Trainer</option>
         </select>
         <p class="help">Select the product you would like to receive more information about.</p>
       </div>
