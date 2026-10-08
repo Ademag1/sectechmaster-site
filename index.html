@@ -56,6 +56,17 @@ section{padding:70px 0}
 .cBody{padding:18px 20px 20px;display:flex;flex-direction:column;flex:1;background:var(--panel)}
 .cBody p{font-size:12.5px;color:#c4d6dc;line-height:1.55;margin:0 0 14px}
 .cAction{display:inline-flex;align-items:center;gap:6px;margin-top:auto;padding-top:18px;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;cursor:pointer}
+.card.featured{grid-column:span 2;flex-direction:row}
+.cTop.bundle{flex:0 0 265px;padding:0;min-height:0;background:#1b0f3a}
+.cTop.bundle:after{display:none}
+.cTop.bundle img{width:100%;height:100%;object-fit:contain;object-position:top;display:block}
+.shops{display:flex;column-gap:18px;row-gap:0;flex-wrap:wrap;margin-top:auto}
+.shops .cAction{margin-top:0;padding-top:12px}
+.bundleKicker{color:var(--teal);margin-bottom:8px}
+.bundleTitle{font-size:24px;line-height:1.05;margin:0 0 10px;font-weight:700}
+.price{font-size:28px;font-weight:700;color:var(--white);margin:0 0 12px}
+.price span{display:block;font-size:12px;font-weight:600;color:var(--muted);margin-top:2px}
+@media(max-width:700px){.card.featured{grid-column:auto;flex-direction:column}.cTop.bundle{flex:none}.cTop.bundle img{height:auto}}
 .cAction.disabled{color:#5d7280;cursor:default}
 .cAction.practice{color:#8dece5}
 .cAction.guide{color:#b9b4ff}
@@ -119,16 +130,13 @@ footer{border-top:1px solid rgba(123,233,255,.1);background:radial-gradient(elli
     <p>A concise collection for building security knowledge through practice, investigation, and disciplined analysis.</p>
   </div>
   <div class="products">
-    <article class="card">
-      <div class="cTop practice"><div class="kicker">Practice set</div><div><div class="cRule"></div><h3 class="display">Security Practice</h3></div></div>
-      <div class="cBody"><p>Targeted exercises that turn core concepts into decision-making habits. 50 questions free, €15 to unlock all.</p>
-        <a class="cAction practice" href="mailto:contact@sectechmaster.com?subject=Notify%20me%20at%20launch">Get the app →</a>
-      </div>
-    </article>
-    <article class="card">
-      <div class="cTop guide"><div class="kicker">Study guide</div><div><div class="cRule"></div><h3 class="display">Security Study Guide</h3></div></div>
-      <div class="cBody"><p>Structured revision material for building a durable security foundation. €9.99 for the full guide.</p>
-        <a class="cAction guide" href="/study-guide.html">Get the guide →</a>
+    <article class="card featured">
+      <div class="cTop bundle"><img src="/secplus-cover.jpg" alt="Security+ Study Guide SY0-701 complete edition, includes the 1,050-question practice app" loading="lazy"></div>
+      <div class="cBody"><div class="kicker bundleKicker">Study guide + practice app</div>
+        <h3 class="display bundleTitle">Security+ Study Guide SY0-701</h3>
+        <div class="price">€29.99 <span>book + app</span></div>
+        <p>63 topics with key facts and “Don’t confuse these” boxes, plus the 1,050-question practice app. Instant digital download for phone, tablet and PC.</p>
+        <div class="shops"><a class="cAction guide" href="https://payhip.com/b/sva6j">Buy on Payhip →</a><a class="cAction guide" href="https://www.etsy.com/listing/4590835742/security-sy0-701-study-guide-pdf-epub" target="_blank" rel="noopener">Buy on Etsy →</a></div>
         <a class="sample" href="/study-guide.html#preview">Read a free sample →</a>
       </div>
     </article>
@@ -172,8 +180,7 @@ footer{border-top:1px solid rgba(123,233,255,.1);background:radial-gradient(elli
       <div class="field"><label for="interestSelect">Resource of interest</label>
         <select id="interestSelect" required>
           <option value="" disabled selected>Select a resource</option>
-          <option>Security+ Practice</option>
-          <option>Security Study Guide</option>
+          <option>Security+ Study Guide + App</option>
           <option>SOC Analyst 1-2-3</option>
           <option>Linux Security Investigation</option>
           <option>Windows Security</option>
